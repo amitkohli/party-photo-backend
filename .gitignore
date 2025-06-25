@@ -1,8 +1,14 @@
-*.js
-!jest.config.js
+# Ignore top-level .js files except jest.config.js
+/*.js
+!/jest.config.js
+
+# Allow all subdirectory .js files (Lambda handlers)
+!lambda/**/*.js
+
 *.d.ts
-node_modules
+node_modules/
+lambda/**/node_modules/
 
 # CDK asset staging directory
-.cdk.staging
-cdk.out
+.cdk.staging/
+cdk.out/
